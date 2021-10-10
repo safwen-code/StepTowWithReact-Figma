@@ -1,11 +1,10 @@
-import logo from '../logo.svg'
 import '../App.css'
 
 function App() {
   return (
-  <div>
-    page d'accueil 🏡
-  </div>
+    <div className="App " style={{ margin: '10px' }}>
+      page d'accueil 🏡
+    </div>
   )
 }
 
