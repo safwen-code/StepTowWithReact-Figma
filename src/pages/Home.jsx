@@ -4,6 +4,7 @@ import { useState } from 'react'
 import colors from '../utils/colors'
 import { StyledLink } from '../utils/Atoms'
 import HomeIllustration from '../assets/HomeIllustration.svg'
+
 const HomeWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -37,21 +38,26 @@ const StyledTitle = styled.h2`
 const Illustration = styled.img`
   flex: 1;
 `
+export function sum(a, b) {
+  return a * b
+}
 function Home() {
   const [size, setsize] = useState(1)
+
   return (
     <HomeWrapper>
       <HomerContainer>
+        {sum(3, 5)}
         <LeftCol>
           <StyledTitle>
             Repérez vos besoins, on s’occupe du reste, avec les meilleurs
             talents
           </StyledTitle>
-          <StyledLink to ='/survey/1' $isFullLink>
-faire le test
+          <StyledLink to="/survey/1" $isFullLink>
+            faire le test
           </StyledLink>
         </LeftCol>
-        <Illustration src={HomeIllustration}/>
+        <Illustration src={HomeIllustration} />
       </HomerContainer>
     </HomeWrapper>
   )
